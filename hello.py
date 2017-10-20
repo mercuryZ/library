@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
+from flask_script import Manager
 
 # 1.程序初始化
 app = Flask(__name__)
+manager = Manager(app)
 
 # 2.写路由 视图函数
 @app.route('/')
@@ -16,4 +18,4 @@ def user(name):
 
 # 3.启动服务器
 if __name__ == '__main__':
-    app.run(debug=True)
+    manager.run()
