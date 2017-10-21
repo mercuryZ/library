@@ -2,10 +2,12 @@
 
 from flask import Flask, render_template
 from flask_script import Manager
+from flask_bootstrap import Bootstrap
 
 # 1.程序初始化
 app = Flask(__name__)
 manager = Manager(app)
+bootstrap = Bootstrap(app)
 
 # 2.写路由 视图函数
 @app.route('/')
